@@ -15,35 +15,66 @@
     <link rel="stylesheet" href="style.css">
     <!--Icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <!--Top Bar-->
-    <div class="bg-slate-200">
-        <div class="container mx-auto p-3 flex items-center justify-between ">
-         <div class="flex"><i class="bi bi-telephone pr-2"></i> <p> 88560 40578, 84830 40578</p></div>
-         <div class="flex items-center"> <button class="bg-red-500 p-2 rounded-xl text-white h-full hover:bg-red-700 transition duration:300">Get a Quote <i class="bi bi-arrow-right"></i></button></div>
-        </div>
+
+  <!--Header-->
+ <header class="sticky top-0 p-3 z-1000">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="logo">
+      <img src="./assests/logo.jpeg" alt="" width="220px">
     </div>
-   <!--Top Bar End-->
-   <!--Header-->
-   <header class="shadow-md  p-3 sticky w-full z-999 top-0 bg-white">
-        <div class="container flex items-center justify-between mx-auto">
-            <div>
-                <img src="./assests/Logo.jpeg" alt="" height="100%" width="200px">
+    <nav >
+      <ul class="flex gap-7">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </div>
+ 
+ </header>
+
+
+    <!-- Swiper -->
+     <div class="home_section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
             </div>
-            <nav>
-                <ul class="flex items-center gap-10">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Gallery</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </div>
-   </header>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="waves_box">
+            <img src="./assests/wavesNegative.svg" alt="">
+          </div>
+     </div>
+ 
+     
+ 
+    
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay :{
+        duration : 500
+      }
+    });
+  </script>
 
 </body>
 </html>
